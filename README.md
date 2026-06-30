@@ -1,2 +1,27 @@
-# Game-rock-paper-scissors
-🎮 A beginner-friendly Rock, Paper, Scissors game built with Python. Play against the computer, which makes random choices using the random module. A simple project to practice user input, conditional statements, lists, and basic Python programming.
+import random 
+
+print("===== Rock, Papper,Scissors Game =====")
+
+
+
+choices = ["rock", "paper", "scissors"]
+computer = random.choice(choices)
+
+player = input("Choose rock , paper, or scissors:").lower()
+
+print("Computer chose:",computer)
+
+if player == computer:
+    print("Its a tie!")
+    
+elif( 
+    (player == "rock" and computer == "scissors") or
+    (player == "paper" and computer == "rock") or
+    (player == "scissors" and computer == "paper") 
+    ):
+        print("🎉 You win!")
+elif player in choices:
+    print("😢 Computer wins!")
+    
+else:
+    print("Invalid choice!")
